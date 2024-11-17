@@ -1,0 +1,5 @@
+o no ultimo teste o app retorna mensagem errada ao cadastrar aluno em uma disciplina
+
+Pytest-BDD
+
+pytest -v test.py
