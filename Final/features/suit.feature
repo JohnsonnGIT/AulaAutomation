@@ -40,4 +40,6 @@ Scenario: cadastrar aluno na materia e curso
     And Eu inscrevo o aluno com id "1" no curso de id "1"
     Then Eu devo ver "INFO Aluno de id 1 inscrito com sucesso no curso de id 1"
     When Eu inscrevo o aluno com id "1" na disciplina de id "1"
-    Then Eu devo ver "INFO Aluno de id 1 inscrito com sucesso na disciplina de id 1" 
+    When Eu inscrevo o aluno com id "1" na disciplina de id "2"
+    When Eu inscrevo o aluno com id "1" na disciplina de id "3"
+    Then Eu devo ver "INFO Student id 1, Name Werner subscribed to discipline id 3"

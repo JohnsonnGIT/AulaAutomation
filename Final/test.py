@@ -46,9 +46,9 @@ def check_discipline_added(demo_page, nome_materia, id_curso):
 def enroll_student_in_discipline(demo_page, id_aluno, id_disciplina):
     demo_page.subscribe_student(id_aluno, id_disciplina)
 
-@then(parsers.parse('Eu devo ver "INFO Aluno de id {id_aluno} inscrito com sucesso na disciplina de id {id_disciplina}"'))
-def check_enrollment_discipline(demo_page, id_aluno, id_disciplina):
-    assert f"INFO Aluno de id {id_aluno} inscrito com sucesso na disciplina de id {id_disciplina}" in demo_page.get_message()
+@then(parsers.parse('Eu devo ver "INFO Student id {id_aluno}, Name {aluno_nome} subscribed to discipline id {id_disciplina}"'))
+def check_enrollment_discipline(demo_page, id_aluno, aluno_nome, id_disciplina):
+    assert f"INFO Student id {id_aluno}, Name {aluno_nome} subscribed to discipline id {id_disciplina}" in demo_page.get_message()
 
 @when(parsers.parse('Eu inscrevo o aluno com id "{id_aluno}" no curso de id "{id_curso}"'))
 def enroll_student_in_course(demo_page, id_aluno, id_curso):
